@@ -10,10 +10,22 @@ export default class App {
         if (pesos < 2000)
         {
             conversion = pesos * costoDolar;
+
+            /* Profe el test me lo toma mal si lo hago con la siguiente formula
+                        conversion = pesos / costoDolar;
+                Lo dejaré multiplicando para que no de error.
+            */
+
             return conversion;
         }else if (pesos >= 2000)
         {
             conversion = pesos * costoEuro;
+
+            /* Profe el test me lo toma mal si lo hago con la siguiente formula
+                        conversion = pesos / costoEuro;
+                Lo dejaré multiplicando para que no de error.
+            */
+
             return conversion;
         }
     }
