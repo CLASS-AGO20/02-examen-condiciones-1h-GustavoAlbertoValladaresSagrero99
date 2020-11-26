@@ -18,6 +18,7 @@ export default class App {
         }
     }
 
+    //CostoRenta
     costoRenta(kilometros)
     {
         let costoRenta;
@@ -40,6 +41,129 @@ export default class App {
             return costoRenta;
         }
     }
+
+    //puede cicurlar funcion
+    puedeCircular(dia, terminacion)
+    {
+        //Terminacion 0 solo Lunes
+        //Terminacion 1 solo Martes
+        //Terminacion 2 Miercoles y Jueves
+        //Las demas terminaciones pueden circular cualquier dia
+
+        if (dia == 1)
+        {
+
+            if (terminacion == 0)
+            {
+                return true;
+            }else if (terminacion == 1)
+            {
+                return false;
+            }else if (terminacion == 2)
+            {
+                return false;
+            }else
+            {
+                return true;
+            } 
+
+        }else if (dia == 2)
+        {
+
+            if (terminacion == 0)
+            {
+                return false;
+            }else if (terminacion == 1)
+            {
+                return true;
+            }else if (terminacion == 2)
+            {
+                return false;
+            }else
+            {
+                return true;
+            } 
+        }else if (dia == 3)
+        {
+            
+            if (terminacion == 0)
+            {
+                return false;
+            }else if (terminacion == 1)
+            {
+                return false;
+            }else if (terminacion == 2)
+            {
+                return true;
+            }else
+            {
+                return true;
+            } 
+        } else if (dia == 4)
+        {
+           
+            if (terminacion == 0)
+            {
+                return false;
+            }else if (terminacion == 1)
+            {
+                return false;
+            }else if (terminacion == 2)
+            {
+                return true;
+            }else
+            {
+                return true;
+            } 
+        } else if (dia == 5)
+        {
+            if (terminacion == 0)
+            {
+                return false;
+            }else if (terminacion == 1)
+            {
+                return false;
+            }else if (terminacion == 2)
+            {
+                return false;
+            }else
+            {
+                return true;
+            } 
+        } else if (dia == 6)
+        {
+            if (terminacion == 0)
+            {
+                return false;
+            }else if (terminacion == 1)
+            {
+                return false;
+            }else if (terminacion == 2)
+            {
+                return false;
+            }else
+            {
+                return true;
+            } 
+        } else if (dia == 7)
+        {
+            if (terminacion == 0)
+            {
+                return false;
+            }else if (terminacion == 1)
+            {
+                return false;
+            }else if (terminacion == 2)
+            {
+                return false;
+            }else
+            {
+                return true;
+            } 
+        } else{
+            return false;
+        }     
+    }
 }
 
 let app = new App();
@@ -47,11 +171,7 @@ let app = new App();
 //Mostrar funciones
 
 console.log(app.convertir(60)); 
-console.log(app.convertir(2050)); 
-
-console.log("costoRenta#######");
 
 console.log(app.costoRenta(44));
-console.log(app.costoRenta(88));
-console.log(app.costoRenta(140));
-console.log(app.costoRenta(203));
+
+console.log(app.puedeCircular(3,2));
